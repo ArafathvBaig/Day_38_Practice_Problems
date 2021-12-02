@@ -51,8 +51,8 @@ function palindrome(...array)
 		while(temp>0)
 		{
 			r=temp%10;
-			sum=Math.round((sum*10),0)+r;
-			temp=Math.round((temp/10),0);
+			sum=(sum*10)+r;
+			temp=Math.floor((temp/10),0);
 		}
         if(array[i]==sum)
 		{
@@ -92,7 +92,7 @@ function prime(b)
 }
 function getPalindrome(c)
 {
-    let temp=Math.round((c/10),0);
+    let temp=Math.floor((c/10),0);
     //let temp=c;
     let r;
     let sum=0;
@@ -100,8 +100,8 @@ function getPalindrome(c)
 	while(temp>0)
 	{
 		r=temp%10;
-		sum=Math.round((sum*10),0)+r;
-		temp=Math.round((temp/10),0);
+		sum=(sum*10)+r;
+		temp=Math.floor((temp/10),0);
         count++;
 	}
     c=(c * Math.pow(10,count))+sum;
